@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:train"
         mc:Ignorable="d"
         Title="Edit_pol" Height="377" Width="769">
-    <Grid>
+    <Grid Style="{DynamicResource okno}">
         <Grid.RowDefinitions>
             <RowDefinition Height="81*"/>
             <RowDefinition Height="284*"/>
             <RowDefinition Height="69*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="69">
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="69" Style="{DynamicResource header}">
             <Image Source="/resourses/logo-full.png" Height="48" Width="152" Margin="10 0 0 0"/>
             <TextBlock Width="20"/>
             <TextBlock Name="til" FontSize="40" VerticalAlignment="Center" Height="68"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="204" >
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="236" >
             <StackPanel Orientation="Vertical" VerticalAlignment="Center" Height="180" Width="104">
                 <TextBlock Text="Фамилия:" Margin="0 0 0 5 " Height="20"/>
                 <TextBlock Text="Имя:" Margin="0 0 0 5 " Height="20"/>
@@ -37,6 +37,6 @@
                 <TextBox x:Name="password"  Height="20"/>
             </StackPanel>
         </StackPanel>
-        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сохранить" FontSize="30" Click="Button_Click"/>
+        <Button Style="{DynamicResource kopochki}" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сохранить" FontSize="30" Click="Button_Click"/>
     </Grid>
 </Window>

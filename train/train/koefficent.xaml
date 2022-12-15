@@ -5,32 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:train"
         mc:Ignorable="d"
-        Title="koefficent" Height="450" Width="916">
-    <Grid Width="916" Margin="0,0,0,-6">
+        Title="koefficent" Height="566" Width="916" Icon="/resourses/logo-smoll.ico">
+    <Grid Width="916" Style="{DynamicResource okno}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="11*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="397*"/>
+            <RowDefinition Height="116*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="97" Style="{DynamicResource header}">
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="129" Style="{DynamicResource header}">
             <Image Source="/resourses/logo-full.png" Height="68" Width="100" Margin="10 0 5 0"/>
             <TextBlock Name="til" Text="Управление коэффицентами" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Center" Height="83" Margin="0 0 30 0" Width="230"/>
-            <TextBlock Text="Выбор исполнителя: " Style="{DynamicResource vod}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <ComboBox x:Name="vib_isp" Width="250" SelectionChanged="vib_isp_SelectionChanged" Height="27"/>
         </StackPanel>
-        <Button Content="Выход" Style="{DynamicResource kopochki}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Height="33" Click="Button_Click" Width="62" />
-        <ListBox x:Name="show_kef" Style="{DynamicResource okno}" Grid.Row="1">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Style="{DynamicResource vod}" Text="{Binding Path=User}"/>
-                    <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Гарантированый минимум ЗП: " Style="{DynamicResource vod}"/>
-                            <TextBlock Text="{Binding Path=}" Style="{DynamicResource vod}"/>
-                        </StackPanel>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <Button Content="Выход" Style="{DynamicResource kopochki}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" Height="33" Click="Button_Click" Width="75" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="318" Width="842" >
+            <StackPanel Margin="0 0 5 0" Height="334" Width="472">
+                <StackPanel Margin="0 0 0 10">
+                    <TextBlock Text="Коэффициент гарантированного минимума зарплаты за месяц" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Junior:" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Middle:" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Senior:" Style="{DynamicResource vod}" />
+                </StackPanel>
+                <StackPanel Margin="0 0 0 10">
+                    <TextBlock Text="Коэффициент характера выполненных работ" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Анализ и проектирование:" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Установка оборудования:" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                    <TextBlock Text="Техническое обсуживание и сопровождения:" Style="{DynamicResource vod}" Margin="0 0 0 15"/>
+                </StackPanel>
+                <TextBlock Text="Коэффициент сложности исполнения задач:" Style="{DynamicResource vod}" Margin="0 0 0 10"/>
+                <TextBlock Text="Коэффициент времени исполнения задач:" Style="{DynamicResource vod}" Margin="0 0 0 10"/>
+                <TextBlock Text="Коэффициент для перевода абстрактного веса задачи в денежный эквивалент:" TextWrapping="Wrap" Style="{DynamicResource vod}" Height="40" Width="469"/>
+            </StackPanel>
+            <StackPanel Width="363" >
+
+                <TextBox x:Name="jun" Style="{DynamicResource vod}" Margin="0 23 0 7"/>
+                <TextBox x:Name="mid" Style="{DynamicResource vod}" Margin="0 0 0 7"/>
+                <TextBox x:Name="sen" Style="{DynamicResource vod}" Margin="0 0 0 23"/>
+
+                <TextBox x:Name="analiz" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                <TextBox x:Name="ystan" Style="{DynamicResource vod}" Margin="0 0 0 5"/>
+                <TextBox x:Name="tech" Style="{DynamicResource vod}" Margin="0 0 0 23"/>
+
+                <TextBox x:Name="Slog" Style="{DynamicResource vod}" Margin="0 0 0 7"/>
+                <TextBox x:Name="VremIs" Style="{DynamicResource vod}" Margin="0 0 0 7"/>
+                <TextBox x:Name="Perevod" Style="{DynamicResource vod}"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Grid.Row="2" Style="{DynamicResource kopochki}" Content="Сохранить" FontSize="30" Click="Button_Click_1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="40" Width="148"/>
     </Grid>
 </Window>
  

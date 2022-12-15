@@ -48,7 +48,7 @@
                                 <TextBlock Text="{Binding Path=Executor.Manager.User}"/>
                             </StackPanel>
                         </StackPanel>
-                        <Button x:Name="rem" Content="Удалить запись" HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Click="rem_Click"/>
+                        <Button x:Name="rem" Style="{DynamicResource kopochki}" Content="Удалить запись" HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Click="rem_Click"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

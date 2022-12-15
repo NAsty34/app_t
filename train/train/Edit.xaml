@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:train"
         mc:Ignorable="d"
-        Title="Edit" Height="422" Width="668">
-    <Grid>
+        Title="Edit" Height="480" Width="668" Icon="/resourses/logo-smoll.ico">
+    <Grid Style="{DynamicResource okno}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="81*"/>
-            <RowDefinition Height="284*"/>
-            <RowDefinition Height="69*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="311*"/>
+            <RowDefinition Height="85*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="69">
-            <Image Source="/resourses/logo-full.png" Height="48" Width="152" Margin="10 0 0 0"/>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="67" Style="{DynamicResource header}">
+            <Image Source="/resourses/logo-full.png" Height="48" Width="128" Margin="10 0 0 0"/>
             <TextBlock Width="20"/>
             <TextBlock Name="til" Text="Редактирование задачи" FontSize="40" VerticalAlignment="Center" Height="68"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="246" >
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Height="222" Width="170">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="170">
                 <TextBlock Text="Название:" Margin="0 0 0 5 " Height="20"/>
                 <TextBlock Text="Описание:" Margin="0 0 0 5 " Height="20"/>
                 <TextBlock Text="Срок исполнения:" Margin="0 0 0 5 " Height="20"/>
@@ -30,8 +30,7 @@
                 <TextBlock Text="Характер задачи:" Margin="0 0 0 5 " Height="20"/>
 
             </StackPanel>
-            <StackPanel Width="20"/>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center"  Height="222" Width="300">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center"   Width="300">
                 <TextBox x:Name="naz" Margin="0 0 0 5" Height="20"/>
                 <TextBox x:Name="dir" Margin="0 0 0 5" Height="20"/>
                 <TextBox x:Name="srok_is" Margin="0 0 0 5" Height="20"/>
@@ -40,12 +39,10 @@
                 <TextBox x:Name="vremy" Margin="0 0 0 5" Height="20"/>
                 <ComboBox x:Name="FIO_Is" Visibility="Collapsed" Margin="0 0 0 5" Height="25"/>
                 <ComboBox x:Name="statys" Margin="0 0 0 5" Height="25" />
-
-
-                <ComboBox x:Name="xar" Height="25"/>
+                <ComboBox x:Name="xar"/>
 
             </StackPanel>
         </StackPanel>
-        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сохранить" FontSize="30" Click="Button_Click"/>
+        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сохранить" FontSize="30" Click="Button_Click" Style="{DynamicResource kopochki}" Height="40" Width="148"/>
     </Grid>
 </Window>

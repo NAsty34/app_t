@@ -15,9 +15,9 @@
             <Setter Property="Control.Background" Value="#d7e7f5"/>
         </Style>
 
-        <Style x:Key="vod" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontFamily" Value="Comic Sans"/>
+        <Style x:Key="vod" >
+            <Setter Property="Control.FontSize" Value="16"/>
+            <Setter Property="Control.FontFamily" Value="Comic Sans"/>
         </Style>
 
         <Style x:Key="vod_text" TargetType="TextBox">

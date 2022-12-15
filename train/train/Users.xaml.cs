@@ -67,7 +67,7 @@ namespace train
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            new Main_task().Show();
             Close();
         }
 

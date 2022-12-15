@@ -12,7 +12,7 @@
                 <RowDefinition Height="58*"/>
                 <RowDefinition Height="167*"/>
             </Grid.RowDefinitions>
-            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="112">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="112" Style="{DynamicResource header}">
                 <Image Source="/resourses/logo-full.png" Height="68" Width="132" Margin="10 0 0 0"/>
                 <TextBlock Width="71"/>
                 <TextBlock Name="til" Text="Исполнители" FontSize="40" VerticalAlignment="Center" Height="68"/>
@@ -25,7 +25,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <ListBox x:Name="show_user" Grid.Row="1" MouseDoubleClick="show_user_MouseDoubleClick" ScrollViewer.CanContentScroll="False">
+        <ListBox Style="{DynamicResource okno}" x:Name="show_user" Grid.Row="1" MouseDoubleClick="show_user_MouseDoubleClick" ScrollViewer.CanContentScroll="False">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
@@ -46,7 +46,7 @@
                                     <TextBlock Text="{Binding Path=Manager.User}"/>
                                 </StackPanel>
                             </StackPanel>
-                            <Button x:Name="rem" Content="Удалить запись" HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Click="rem_Click"/>
+                            <Button Style="{DynamicResource kopochki}" x:Name="rem" Content="Удалить запись" HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Center" Click="rem_Click"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
