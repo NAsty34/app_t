@@ -5,40 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:train"
         mc:Ignorable="d"
-        Title="Main" Height="310" Width="457" ResizeMode="NoResize" Icon="/resourses/logo-smoll.png" >
+        Title="Main" Icon="/resourses/logo-smoll.png" WindowState="Maximized" MinHeight="621" MinWidth="1159">
 
-    <Grid Style="{DynamicResource okno}"  >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="48*"/>
-                <RowDefinition Height="69*"/>
-                <RowDefinition Height="38*"/>
-            </Grid.RowDefinitions>
+    <Grid Style="{DynamicResource okno}" MinHeight="621" MinWidth="1159">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
 
-            <StackPanel Orientation="Horizontal" Style="{DynamicResource header}">
-
-                <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <Image Source="/resourses/logo-full.png" Height="23" Width="61" Margin="10 0 0 0"/>
+        <Viewbox >
+            <StackPanel Orientation="Horizontal" Width="468" Style="{DynamicResource header}" Height="75">
+                <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" Height="34" Width="135" Margin="1 0 4 0">
+                    <Image Source="/resourses/logo-full.png" Width="52"/>
                 </StackPanel>
-
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Авторизация" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"/>
-                    <TextBlock Text="Введите логин и пароль"/>
+                <Viewbox Margin="0 10 0 0" Width="203">
+                    <StackPanel VerticalAlignment="Center" Height="51" HorizontalAlignment="Center">
+                    <TextBlock Text="Авторизация" HorizontalAlignment="Center" FontWeight="Bold" Style="{DynamicResource vod}" Height="16"/>
+                    <TextBlock Text="Введите логин и пароль" Height="17"/>
                 </StackPanel>
-
+                </Viewbox>
             </StackPanel>
+        </Viewbox>
 
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Grid.Row="1" Width="176">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Логин:" Width="60" Style="{DynamicResource vod}"/>
-                    <TextBox x:Name="log" Width="115" Style="{DynamicResource vod_text}"/>
+        <Viewbox MaxHeight="150" MaxWidth="600" Grid.Row="1"  >
+
+            <StackPanel Orientation="Vertical" Style="{DynamicResource vod}" >
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" >
+                    <TextBlock Text="Логин:" Width="71" />
+                    <TextBox x:Name="log" Width="115" />
                 </StackPanel>
-                <StackPanel Height="10"/>
+
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Пароль:" Width="60" Style="{DynamicResource vod}"/>
+                    <TextBlock Text="Пароль:" Style="{DynamicResource vod}" Width="71"/>
                     <PasswordBox x:Name="pas" Width="115" FontSize="15" KeyDown="pas_KeyDown"/>
                 </StackPanel>
+
             </StackPanel>
-            <Button Grid.Row="2" Style="{DynamicResource kopochki}" VerticalAlignment="Center" Content="Войти" HorizontalAlignment="Center" Width="102" Height="24" Click="Button_Click"/>
-        </Grid>
-    
+        </Viewbox>
+        <Viewbox Grid.Row="2" MaxHeight="80" MaxWidth="600" VerticalAlignment="Center" Height="80">
+            <Button  Style="{DynamicResource kopochki}" VerticalAlignment="Center" Content="Войти" HorizontalAlignment="Center" Width="102" Height="24" Click="Button_Click"/>
+        </Viewbox>
+    </Grid>
+
 </Window>
